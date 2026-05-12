@@ -1,25 +1,25 @@
 class Bb < Formula
   desc "bb — Beebeeb CLI for end-to-end encrypted cloud storage"
   homepage "https://beebeeb.io"
-  version "0.1.4"
+  version "0.1.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.4/beebeeb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "eb01fac3fda5cfaef5fc612d2d1c85761179bce5e6278c222ccb2b192c7e93fb"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.5/beebeeb-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "1d78aad51aeb83d0e8c802968d1518f3fa807530569a8293426e566de0ca4872"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.4/beebeeb-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c26dd10574536ae0e0bc353dd07145094719a3f41883244bc5069b4bdf3e5eec"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.5/beebeeb-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "b07f70e8168bf6559e282c29b96e45871ed1a542cf8614c2cd6f38a78fc90c3a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.4/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "d3d67b2034b3e2f0395ec3bd301696f4f518747fd0f34a287cb1116345ec1078"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.5/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "3a9c5766056250310ae03769c0e2a21df03fcc1ac0e1245784cbc662f68560cb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.4/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "af22b8e9928c4431b087af92ecea00191d30bc87c30806975d10c4953369003f"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.1.5/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "af009a249f3e45a6d9d99800b8db89c0223983aca5f0c825c5c7682c2dd6e440"
     end
   end
   license "AGPL-3.0-or-later"
