@@ -1,25 +1,25 @@
 class Bb < Formula
   desc "bb — Beebeeb CLI for end-to-end encrypted cloud storage"
   homepage "https://beebeeb.io"
-  version "0.4.0"
+  version "0.6.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.4.0/beebeeb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "27c788a7af0c4fde47f93355b37f956ebd8d6ce9b8ac3f62c19402fca2c32d72"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.6.2/beebeeb-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "6078e58f4a3929874ec7080235723b8ac9adb200ee4471388d704f69ba4c43bc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.4.0/beebeeb-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "f8082ba237592c28cb80666bcff293d60cf15167334d8d59677fff6bc36c212b"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.6.2/beebeeb-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "4697c56b4000c70e9498f8a8fc269437a557ac82b9c7dd3ec85a0115f7d5004a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.4.0/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "6116fcb87f924ee3c41c95b740fcdd58856c7b3b299323b83354e4de1658693f"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.6.2/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "d09be04bd023739182fdd2f06e8d3d10a8fc323f8acf642a997fef20a2c77b26"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.4.0/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "aca19a68072ab8a392d2db7245565b5c294cb59a4f579e72a257b5d02ffb32b6"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.6.2/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "751a3ff7094aa4fd32f788a20f698acf32f80a5a03810743fe444b8184f19b49"
     end
   end
   license "AGPL-3.0-or-later"
@@ -30,6 +30,7 @@ class Bb < Formula
     "aarch64-unknown-linux-musl-dynamic": {},
     "aarch64-unknown-linux-musl-static":  {},
     "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
     "x86_64-unknown-linux-gnu":           {},
     "x86_64-unknown-linux-musl-dynamic":  {},
     "x86_64-unknown-linux-musl-static":   {},
