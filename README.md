@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://get.beebeeb.io"><img src="https://img.shields.io/badge/install-bb-f5b800.svg" alt="Install" /></a> &nbsp;
   <img src="https://img.shields.io/badge/homebrew-tap-555.svg" alt="Homebrew tap" /> &nbsp;
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555.svg" alt="License: MIT" /></a> &nbsp;
   <a href="SECURITY.md"><img src="https://img.shields.io/badge/security-policy-555.svg" alt="Security policy" /></a>
 </p>
 <p align="center"><a href="https://beebeeb.io">Website</a> &nbsp;·&nbsp; <a href="https://beebeeb.io/security">How it works</a> &nbsp;·&nbsp; <a href="SECURITY.md">Report a vulnerability</a></p>
@@ -41,3 +42,7 @@ Found a vulnerability? Email **security@beebeeb.io** — see [SECURITY.md](SECUR
 
 End-to-end encrypted, zero-knowledge cloud storage — made in Europe.
 [core](https://github.com/beebeeb-io/core) · [cli](https://github.com/beebeeb-io/cli) · [web](https://github.com/beebeeb-io/web) · [mobile](https://github.com/beebeeb-io/mobile) · [desktop](https://github.com/beebeeb-io/desktop) · [website](https://beebeeb.io)
+
+## License
+
+[MIT](LICENSE) — © Initlabs B.V., Wijchen, Netherlands. The `bb` binary it installs is AGPL-3.0 (see the [cli repo](https://github.com/beebeeb-io/cli)).
