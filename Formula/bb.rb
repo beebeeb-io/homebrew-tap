@@ -1,40 +1,40 @@
 class Bb < Formula
   desc "bb — Beebeeb CLI for end-to-end encrypted cloud storage"
   homepage "https://beebeeb.io"
-  version "0.9.1"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.9.1/beebeeb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "68d72bc995ef1b07ab0d30de3582f6700d6d3fae7c4a813dde009e90e4c57b8e"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.10.0/beebeeb-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "9e5003220120e91003bf86d62ce1d6158309fb026dbe0104c969c03ebc13fcd4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.9.1/beebeeb-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "e990b2a52e46f8d736771e202c413ec7a81a758412646a20d749bb0f206ab011"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.10.0/beebeeb-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "43a6df96f8222b43631535def28cd109e9eb48d52d08bb8e4db1e308e3ca8357"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.9.1/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "6d2569b2acac772331bb93923207a0ba072e5bc5bd2e5b2915da18bde47771da"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.10.0/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "9f2494bbe84fd86f5d3730a287cd5b16dea1126d7c97f94fc63b77e1eb538d6d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.9.1/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "8f35b18df467c63c3c694429492cba3eb9b62e5e4fe456e60b26bc4a7b76a0f0"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.10.0/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "92ca5677d2956e49fa717cf7ea18a76f0bcccd304b535ab90f777b91507f5d74"
     end
   end
   license "AGPL-3.0-or-later"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":               {},
-    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "aarch64-unknown-linux-musl-dynamic": {},
-    "aarch64-unknown-linux-musl-static":  {},
-    "x86_64-apple-darwin":                {},
-    "x86_64-pc-windows-gnu":              {},
-    "x86_64-unknown-linux-gnu":           {},
-    "x86_64-unknown-linux-musl-dynamic":  {},
-    "x86_64-unknown-linux-musl-static":   {},
-  }.freeze
+    "aarch64-unknown-linux-musl-static": {},
+    "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -52,10 +52,18 @@ class Bb < Formula
   end
 
   def install
-    bin.install "bb" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bb" if OS.mac? && Hardware::CPU.intel?
-    bin.install "bb" if OS.linux? && Hardware::CPU.arm?
-    bin.install "bb" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "bb"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "bb"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "bb"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "bb"
+    end
 
     install_binary_aliases!
 
