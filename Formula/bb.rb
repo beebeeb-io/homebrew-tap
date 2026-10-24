@@ -1,40 +1,40 @@
 class Bb < Formula
   desc "bb — Beebeeb CLI for end-to-end encrypted cloud storage"
   homepage "https://beebeeb.io"
-  version "0.14.0"
+  version "0.14.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.0/beebeeb-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "00f8c5f6ff764b4a35965e7a893edf1cb4a1cc0f4d0aa534ec9cd8fd3683f637"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.1/beebeeb-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "cc4e350c68b92f1af3bd4fefff9cedddd75253046051069f84b373900741ca2c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.0/beebeeb-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "9b01648119ed44f8d0579a4a13a4963ee4c815862273e4656e4a2bc430cd6b69"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.1/beebeeb-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "f5dd4d66ab5763d52d502e541a323c07deb430225938b9e87ae13830c1f4b047"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.0/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "dbe39867b8f0f42fb322b4c3cfa41fafc456c28d00f618e354d00299c8422d4b"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.1/beebeeb-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "991dc5e7809296b6434bbff68d3adb4a81f3c878ac1002f51a5be035fdc7ce56"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.0/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "a41dccfe44d5bce435926573c46aa8cb3c9c597d6cd385c3e7fff1a0b5624089"
+      url "https://github.com/beebeeb-io/cli/releases/download/v0.14.1/beebeeb-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "0717957ff0b9e13367b756c799d57df04379411aca5376614a63001c5eca88c2"
     end
   end
   license "AGPL-3.0-or-later"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":               {},
-    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "aarch64-unknown-linux-musl-dynamic": {},
-    "aarch64-unknown-linux-musl-static":  {},
-    "x86_64-apple-darwin":                {},
-    "x86_64-pc-windows-gnu":              {},
-    "x86_64-unknown-linux-gnu":           {},
-    "x86_64-unknown-linux-musl-dynamic":  {},
-    "x86_64-unknown-linux-musl-static":   {},
-  }.freeze
+    "aarch64-unknown-linux-musl-static": {},
+    "x86_64-apple-darwin": {},
+    "x86_64-pc-windows-gnu": {},
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
+  }
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
